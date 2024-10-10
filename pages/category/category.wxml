@@ -1,0 +1,27 @@
+<!--pages/category/category.wxml-->
+<navigation-bar title="分类" color="black" background="#d9d9d9" back="true"></navigation-bar>
+
+<view>
+  <view class="left-sidebar">
+    <van-sidebar active-key="{{ activeKey }}">
+      <block  wx:for="{{sidebarItem}}" wx:key="index">
+        <van-sidebar-item title="{{item.text}}"  bind:tap="onChange" data-title="{{item.text}}" /> 
+      </block>
+    </van-sidebar>
+    <van-notify id="van-notify" />
+  </view>
+
+  <view class="right-sidebar">
+    <van-grid column-num="3" border="{{ false }}">
+      <van-grid-item use-slot wx:for="{{ categoryData }}" wx:key="index">
+        <view bind:tap="onclickGoodsDetail" data-tag="{{item.tag}}"> 
+            <image
+            style="width: 100%; height: 60px;"
+            src="{{ item.image}}"
+            />
+          <text>{{ item.tag }}</text>
+        </view>
+     </van-grid-item>
+    </van-grid>
+  </view>
+</view>

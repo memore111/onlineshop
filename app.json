@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/news/news",
+    "pages/mine/mine",
+    "pages/computer/computer",
+    "pages/search/search",
+    "pages/goods/goods",
+    "pages/details/details",
+    "pages/ServiceAgent/ServiceAgent",
+    "pages/category/category",
+    "pages/buy/buy",
+    "pages/superMarket/superMarket",
+    "pages/seafood/seafood",
+    "pages/makeup/makeup",
+    "pages/cloth/cloth",
+    "pages/shop/shop",
+    "pages/vip/vip",
+    "pages/international/international",
+    "pages/order/order",
+    "pages/unpay/unpay",
+    "pages/unevaluate/unevaluate",
+    "pages/afterSale/afterSale",
+    "pages/myWallet/myWallet",
+    "pages/saleReturn/saleReturn",
+    "pages/pay/pay",
+    "pages/myAddress/myAddress",
+    "pages/orderDetail/orderDetail"
+  ],
+
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text" : "主页",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index_active.png"
+    },{
+      "pagePath": "pages/category/category",
+      "text" : "分类",
+      "iconPath": "images/category.png",
+      "selectedIconPath": "images/category_active.png"
+    },
+    {
+      "pagePath": "pages/news/news",
+      "text" : "消息",
+      "iconPath": "images/news.png",
+      "selectedIconPath": "images/news_active.png"
+    },{
+      "pagePath": "pages/cart/cart",
+      "text" : "购物车",
+      "iconPath": "images/cart.png",
+      "selectedIconPath": "images/cart_active.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text" : "我的",
+      "iconPath": "images/mine.png",
+      "selectedIconPath": "images/mine_active.png"
+    }
+
+    ]
+  },
+
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

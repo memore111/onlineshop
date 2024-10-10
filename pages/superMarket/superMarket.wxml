@@ -1,0 +1,36 @@
+<!--pages/superMarket/superMarket.wxml-->
+<navigation-bar title="超市" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<view class="container">
+  <view class="header">
+    <!-- 搜索框 -->
+    <van-search
+      bind:tap="clickSearch"
+      bind:focus="clickSearch"
+      disabled
+      value="{{ value }}"
+      shape="round"
+      background="#c82519"
+      placeholder="请输入搜索关键词"/>
+      <!-- 轮播图 -->
+    <swiper
+    swiperData="{{ swiperData }}"
+    autoplay="{{swiperOptions.autoplay}}"
+    indicator="{{swiperOptions.indicator}}"
+    duration="{{swiperOptions.duration}}"
+    interval="{{swiperOptions.interval}}">
+    </swiper>
+  </view>
+
+  <view class="gird">
+    <view class="nav">
+    <van-grid column-num="4">
+      <van-grid-item icon="{{ item.icon }}" text="{{item.text}}" wx:key="index" wx:for="{{ navData }}" data-text="{{item.text}}" bind:tap="navDetails"/>
+    </van-grid>
+  </view>
+
+  <!-- 商品展示 -->
+  <view class="goodlist">
+    <van-empty description="暂无商品" />
+  </view>
+  </view>
+</view>

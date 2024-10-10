@@ -1,0 +1,3 @@
+<!--pages/myWallet/myWallet.wxml-->
+<navigation-bar title="我的钱包" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<text>pages/myWallet/myWallet.wxml</text>

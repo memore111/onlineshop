@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<navigation-bar class="nav-bac" title="在线商城平台" back="{{false}}" color="black" background="#c82519"></navigation-bar>
+<view class="container"> 
+  <view class="header">
+    <van-search
+      bind:tap="clickSearch"
+      bind:focus="clickSearch"
+      disabled
+      value="{{ value }}"
+      shape="round"
+      background="#c82519"
+      placeholder="请输入搜索关键词"/>
+
+    <swiper
+    swiperData="{{ swiperData }}"
+    autoplay="{{swiperOptions.autoplay}}"
+    indicator="{{swiperOptions.indicator}}"
+    duration="{{swiperOptions.duration}}"
+    interval="{{swiperOptions.interval}}">
+    </swiper>
+  </view>
+
+  <view class="nav">
+    <van-grid column-num="4">
+      <van-grid-item icon="{{ item.icon }}" text="{{item.text}}" data-name="{{item.name}}" wx:key="index" wx:for="{{ navData }}" data-text="{{item.text}}" bind:tap="navDetails"/>
+    </van-grid>
+  </view>
+
+  <good-list goodsData= "{{goodsData}}"></good-list>
+</view>

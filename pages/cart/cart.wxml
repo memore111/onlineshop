@@ -1,0 +1,19 @@
+<!--pages/cart/cart.wxml-->
+<navigation-bar title="购物车" back="true" color="black" background="#d9d9d9"></navigation-bar>
+<view class="list"   wx:for="{{cartData}}" wx:key="index" >
+    <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+      <view slot="left" class="van-swipe-cell__left">选择</view>
+    <van-cell-group class="cellGroup" >
+        <van-card
+        num="1"
+        price="{{ item.price}}"
+        desc="{{ item.title}}"
+        thumb="{{ item.image }}"
+        data-currentID="{{ item.currentID }}"
+        bind:tap="enterBuy"
+      />
+    </van-cell-group>
+    <view slot="right" data-id="{{item.id}}"  bind:tap="onClickDelet" class="van-swipe-cell__right">删除</view>
+  </van-swipe-cell>
+
+</view>

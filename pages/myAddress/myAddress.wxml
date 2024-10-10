@@ -1,0 +1,2 @@
+<!--pages/myAddress/myAddress.wxml-->
+<navigation-bar title="我的" color="black" background="#d9d9d9" back="true"></navigation-bar>

@@ -1,0 +1,4 @@
+<!--pages/ServiceAgent/ServiceAgent.wxml-->
+<navigation-bar title="客服" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<text>pages/ServiceAgent/ServiceAgent.wxml</text>
+<text>sorry, 资金不足没有客服</text>

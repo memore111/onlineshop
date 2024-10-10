@@ -1,0 +1,2 @@
+<!--pages/pay/pay.wxml-->
+<navigation-bar title="付款页" color="black" background="#d9d9d9" back="true"></navigation-bar>

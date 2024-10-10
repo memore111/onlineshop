@@ -1,0 +1,9 @@
+/* components/swiper/swiper.wxss */
+.swiper{
+  padding: 0px 8px;
+}
+
+.swiperimg{
+  width: 100%;
+}
+

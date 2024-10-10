@@ -1,0 +1,10 @@
+<!--pages/news/news.wxml-->
+<navigation-bar title="消息" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<van-notice-bar
+  left-icon="volume-o"
+  text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。"
+/>
+<van-cell-group inset>
+  <van-cell title="消息" value="未读" />
+  <van-cell title="微信小程序商城" value="优惠卷" label="使用优惠卷获取最优的商品下单价格" />
+</van-cell-group>

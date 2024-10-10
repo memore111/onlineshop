@@ -1,0 +1,18 @@
+/* pages/cart/cart.wxss */
+.van-swipe-cell__left{
+  color: #FFF;
+  width: 65px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #40ff00;
+}
+
+.van-swipe-cell__right{
+  background-color:red;
+  width: 65px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  color: #FFF;
+}

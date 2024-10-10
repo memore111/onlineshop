@@ -1,0 +1,11 @@
+<view class="good-list">
+  <view class="good-item" wx:for="{{ goodsData }}" wx:key="index">
+      <navigator url="/pages/details/details?id={{ item.id }}">
+        <view >
+      <image class="img" src="{{item.url}}" mode="widthFix"/>
+    </view>
+    <view class="goodsText">{{item.title}}</view>
+    <view class="goosPrice">￥<text>{{item.price}}</text>.00</view>
+      </navigator>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/buy/buy.wxml-->
+<navigation-bar title="购买页" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<view>
+
+  <view class="goodslist">
+      <block>
+        <van-card
+            num="1"
+            tag="超贵有木有"
+            price="{{buyData.price}} "
+            title="{{buyData.title}}"
+            thumb="{{buyData.url }}"
+            >
+            <view slot="footer">
+              <van-button size="mini">+</van-button>
+              <van-button size="mini">-</van-button>
+            </view>
+        </van-card>
+      </block>
+  </view>
+
+  <view class="pay">
+    <van-submit-bar
+          price="{{ buyData.price * 100 }}"
+          button-text="提交订单"
+          bind:submit="onClickButton"
+          tip="{{ true }}"
+        >
+          <van-tag  type="primary">标签</van-tag>
+          <view slot="tip">您的收货地址不支持同城送,<text>修改地址</text>
+              <van-cell title="修改地址" is-link bind:click="showPopup" />
+          </view>
+          <van-popup show="{{ show }}" position="bottom" custom-style="height: 40vh;"bind:close="onClose"><van-area style="height: 100%;" area-list="{{ areaList }}" value="110101" bind:confirm='addressconfirm' bind:cancel='addresscancel'/>
+              <van-cell-group>
+                  <van-field
+                    model:value="{{ detailAddress }}"
+                    placeholder="详细地址："
+                    border="{{ false }}"
+                  />
+                  <van-field
+                    model:value="{{ phoneNumber }}"
+                    placeholder="电话："
+                    border="{{ false }}"
+                  />
+                  <van-field
+                    model:value="{{ consignee }}"
+                    placeholder="收货人："
+                    border="{{ false }}"
+                  />
+                </van-cell-group>
+            </van-popup>
+    </van-submit-bar>
+  </view>
+</view>

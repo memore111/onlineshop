@@ -1,0 +1,23 @@
+<!--pages/order/order.wxml-->
+<navigation-bar title="订单" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<view   wx:for="{{orderData}}" wx:key="index">
+  <van-cell-group>
+    <navigator url="/pages/orderDetail/orderDetail?id={{ item.id }}">
+      <van-card
+      num="{{item.num}}"
+      tag="{{item.tag}}"
+      price="{{item.price}}"
+      desc="{{item.description}}"
+      title="{{item.title}}"
+      thumb="{{item.topimage}}"
+      >
+      </van-card>
+    </navigator>
+    <van-cell title="订单详情" is-link arrow-direction="down"  bind:tap="showDetail" data-index="{{index}}" data-address="{{item.address}}"/>
+      <block wx:if="{{currentIndex === index}}">
+        <van-cell  title="收货地址" value="{{currentAddress[4].name}} {{currentAddress[5].name}} {{currentAddress[6].name}} {{currentAddress[2].detailAddress}}" />
+        <van-cell  title="收货信息" value="{{currentAddress[0].consignee}} - {{currentAddress[1].phoneNumber}}" />
+        <van-cell  title="支付方式" value="在线支付" />
+      </block>
+  </van-cell-group>
+</view>

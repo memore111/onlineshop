@@ -1,0 +1,6 @@
+<!--pages/seafood/seafood.wxml-->
+<navigation-bar title="海鲜" color="black" background="#d9d9d9" back="true"></navigation-bar>
+  <!-- 商品展示 -->
+  <view class="goodlist">
+    <van-empty description="暂无商品" />
+  </view>

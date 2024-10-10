@@ -1,0 +1,24 @@
+<navigation-bar title="我的" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<van-notice-bar
+          left-icon="volume-o"
+          text="由于小程序对getUserProfile方法的回收不再能获取用户头像和昵称，统一返回空白头像和微信用户,请用户登录后手动选择头像和昵称"/>
+<view class="container">
+  <view class="header">
+    <view>
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+      </button> 
+      <form bindsubmit="getUsername">
+        <input type="nickname" class="weui-input" name='nickname' placeholder="请输入昵称" value="{{ nickname}}"></input>
+        <button form-type="submit">确认</button>
+      </form>
+    </view>
+  </view>
+  <view class="container">
+    <van-grid column-num="3">
+      <van-grid-item data-name="{{ item.name }}" icon="{{item.img}}" text="{{item.text}}" wx:for="{{ containerData }}" wx:key="index" bind:tap="navigateTo"/>
+    </van-grid>
+
+  </view>
+</view>
+

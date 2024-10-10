@@ -1,0 +1,16 @@
+<!--pages/international/international.wxml-->
+<navigation-bar title="国际" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<view>
+  <van-cell title="展示弹出层" is-link bind:click="showPopup" />
+  <van-popup
+  show="{{ show }}"
+  position="top"
+  custom-style="height: 20%;"
+  bind:close="onClose"
+/>
+
+</view>
+  <!-- 商品展示 -->
+  <view class="goodlist">
+    <van-empty description="暂无商品" />
+  </view>

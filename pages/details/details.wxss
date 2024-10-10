@@ -1,0 +1,17 @@
+/* pages/details/details.wxss */
+.goodsDetailImg{
+  height: 30px;
+}
+
+.goodsDetailPrice{
+  color: red;
+}
+
+.goodsDetailPrice-main{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.goodsDetailText{
+  font-weight: bold;
+}

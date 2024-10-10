@@ -1,0 +1,17 @@
+/* pages/mine/mine.wxss */
+.avatar-wrapper{
+  /* background-image: url(https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0); */
+  width: 100px;
+  height: 100px;
+}
+
+.avatar{
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  margin-left: -15px;
+}
+.weui-input{
+  height: 40px;
+  text-align: center;
+}

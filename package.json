@@ -1,0 +1,16 @@
+{
+  "name": "onlineshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "memore9527",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/area-data": "^1.5.1",
+    "@vant/weapp": "^1.11.2",
+    "onlineshop": "file:"
+  }
+}

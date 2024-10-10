@@ -1,0 +1,16 @@
+<view class="swiper">
+    <swiper
+    class="myswiper"
+    indicator-dots="{{indicator}}"
+    duration="{{duration}}"
+    interval="{{interval}}"
+    autoplay="{{autoplay}}"
+    indicator-active-color="#f1503b">
+      <block wx:for="{{swiperData}}" wx:key="index">
+        <swiper-item>
+          <image class="swiperimg" src="{{item.url}}" mode="widthFix"/>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
+

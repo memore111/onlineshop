@@ -1,0 +1,31 @@
+<!--pages/details/details.wxml-->
+<navigation-bar title="商品详情" color="black" background="#d9d9d9" back="true"></navigation-bar>
+<view>
+  <view>
+    <image class="goodsDetailImg" src="{{goodsDetails.topimage}}" mode="widthFix"/>
+  </view>
+
+  <view class="goodsDetailPrice">
+    ￥<text class="goodsDetailPrice-main">{{goodsDetails.price}}</text>.00
+  </view>
+
+  <view >
+    <text class="goodsDetailText">{{goodsDetails.title}}</text>
+  </view>
+
+  <view class="goodsIntroduce">
+    <image class="goodsDetailImg-Introduce" src="{{goodsDetails.details}}" mode="widthFix"/>
+  </view>
+
+  <van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickKF" />
+    <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickCart" />
+    <van-goods-action-button
+      text="加入购物车"
+      type="warning"
+      bind:click="onClickAddCart"
+    />
+    <van-goods-action-button text="立即购买" bind:click="onClickBuy" data-id="{{goodsDetails.id}}" />
+  </van-goods-action>
+
+</view>
